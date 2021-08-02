@@ -9,7 +9,7 @@ This application works as a remote microservice for another application
 The scope of this pet project was to implement autoassigning roles
 as an outside microservice for a [@MeltonSmith's](https://github.com/MeltonSmith) project [HYIP test](https://github.com/MeltonSmith/hyipTest)
 
-##Structure
+## Structure
 
 Service works in 3 simple stages
 
@@ -25,4 +25,4 @@ Service works in 3 simple stages
 which is configured in `application.yml`
    
    
-  ###Many thanks to @MeltonSmith for providing kafka server and advice 
+  ### Many thanks to @MeltonSmith for providing kafka server and advice 
