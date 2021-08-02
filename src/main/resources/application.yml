@@ -1,0 +1,25 @@
+spring:
+
+  kafka:
+    #    kafka on Melton`s macbook
+    bootstrap-servers: '192.168.1.129:9094'
+    producer:
+      properties:
+        #        how long producer will block the thread
+        "max.block.ms": 10000
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    listener:
+      poll-timeout: 10000
+      concurrency: 1
+
+    consumer:
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+      client-id: roleAssigner
+      group-id: assigner-group2
+
+    topicToListen: userForApproval
+    topicToSend: processedUsers
